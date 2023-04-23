@@ -6,7 +6,7 @@ The refactor/extraction was inspired by [152334H's repo](https://github.com/1523
 
 The ease-of-bringup by [WangRongsheng's work/rehosting](https://github.com/Vision-CAIR/MiniGPT-4/pull/122).
 
-Please note that usage is limited by LLaMA terms, so no non-commercial use is allowed.
+Please note that usage is limited by LLaMA terms, so only non-commercial use is allowed.
 
 ## Preparation
 
