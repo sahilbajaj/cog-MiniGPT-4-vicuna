@@ -1,9 +1,3 @@
-import argparse
-from PIL import Image
-from minigpt4.conversation.conversation import CONV_VISION, Chat
-from minigpt4.common.registry import registry
-from minigpt4.common.config import Config
-from cog import BasePredictor, Input, Path
 import os
 cache = "/src/weights/"
 os.environ["TORCH_HOME"] = "/src/weights/"
@@ -11,6 +5,16 @@ os.environ["HF_HOME"] = "/src/weights/"
 os.environ["HUGGINGFACE_HUB_CACHE"] = "/src/weights/"
 if not os.path.exists(cache):
     os.makedirs(cache)
+
+# Do not import torch before setting the environment variables
+
+import argparse
+from PIL import Image
+from minigpt4.conversation.conversation import CONV_VISION, Chat
+from minigpt4.common.registry import registry
+from minigpt4.common.config import Config
+from cog import BasePredictor, Input, Path
+
 
 
 class Predictor(BasePredictor):
