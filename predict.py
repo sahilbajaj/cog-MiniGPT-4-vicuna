@@ -1,11 +1,4 @@
-from cog import BasePredictor, Input
-from minigpt4.common.config import Config
-from minigpt4.common.registry import registry
-from minigpt4.conversation.conversation import Chat
-
-import argparse
 import os
-
 cache = "/src/weights/"
 os.environ["TORCH_HOME"] = "/src/weights/"
 os.environ["HF_HOME"] = "/src/weights/"
@@ -13,6 +6,13 @@ os.environ["HUGGINGFACE_HUB_CACHE"] = "/src/weights/"
 if not os.path.exists(cache):
     os.makedirs(cache)
 
+from cog import BasePredictor, Input
+from minigpt4.common.config import Config
+from minigpt4.common.registry import registry
+from minigpt4.conversation.conversation import Chat
+
+import argparse
+import os
 
 class Predictor(BasePredictor):
     def setup(self):
