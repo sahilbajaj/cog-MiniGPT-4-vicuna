@@ -15,6 +15,7 @@ Please note that usage is limited by LLaMA terms, so no non-commercial use is al
 ## Build
 
 1. Run `cog run python dl.py` to download weights from WangRongsheng. This will save the weights to a `./weights` directory.
+2. Run `sudo chmod -R +r weights/` to make the weights readable by the builder.
 2. Run `cog build` to build the docker image. This will take a while.
 
 Pushing from here on out is what's on [Cog's docs](https://github.com/replicate/cog/blob/main/docs/getting-started.md).
