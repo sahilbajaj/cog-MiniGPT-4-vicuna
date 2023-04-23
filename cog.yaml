@@ -1,0 +1,28 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  # set to true if your model requires a GPU
+  gpu: true
+  cuda: "11.6"
+
+  # python version in the form '3.8' or '3.8.12'
+  python_version: "3.9"
+
+  run:
+  # speed up downloading weights with gcloud storage cp
+  - "wget https://raw.githubusercontent.com/WangRongsheng/Use-LLMs-in-Colab/main/MiniGPT-4/requirements.txt"
+  - "pip install -qr requirements.txt"
+  - "pip install -q salesforce-lavis"
+  - "pip install -q bitsandbytes"
+  - "pip install -q accelerate"
+  - "pip install -q gradio==3.27.0"
+  - "pip install -q salesforce-lavis"
+  - "pip install -q bitsandbytes"
+  - "pip install -q accelerate"
+  - "pip install -q gradio==3.27.0"
+  - "wget https://huggingface.co/wangrongsheng/MiniGPT4-7B/resolve/main/prerained_minigpt4_7b.pth"
+
+
+# predict.py defines how predictions are run on your model
+predict: "predict.py:Predictor"
