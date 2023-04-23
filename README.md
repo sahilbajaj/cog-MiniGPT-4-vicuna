@@ -1,12 +1,16 @@
-# Cog-ized for running on Replicate.com
+# MiniGPT-4 w/ Vicuna-7B Cog-ized for running on Replicate.com
 
-This is MiniGPT-4 w/ Vicuna-7B, really sloppily ported to run on replicate.com.
+https://replicate.com/nelsonjchen/minigpt-4_vicuna-7b
+
+This is MiniGPT-4 w/ Vicuna-7B, really sloppily ported to run on replicate.com. It's not really meant to be used as a chat experience. It's more useful for image captioning or questioning.
 
 The refactor/extraction was inspired by [152334H's repo](https://github.com/152334H/MiniGPT-4-discord-bot/blob/bot/bot.py).
 
-The ease-of-bringup by [WangRongsheng's work/rehosting](https://github.com/Vision-CAIR/MiniGPT-4/pull/122).
+The ease-of-bringup with regards to model retrieval and processing is mostly from [WangRongsheng's work/rehosting/colab guidance](https://github.com/Vision-CAIR/MiniGPT-4/pull/122).
 
 Please note that usage is limited by LLaMA terms, so only non-commercial use is allowed.
+
+Hopefully the MiniGPT4 or other groups may be able to provide a more permissive license in the future with a non-LLaMA model?
 
 ## Preparation
 
