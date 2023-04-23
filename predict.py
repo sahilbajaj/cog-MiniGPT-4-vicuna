@@ -55,6 +55,18 @@ class Predictor(BasePredictor):
             description="Message to send to the bot.",
             default="Please describe the image.",
         ),
+        num_beams: int = Input(
+            description="beam search numbers",
+            ge=1,
+            le=10,
+            default=1,
+        ),
+        temperature: float = Input(
+            description="temperature",
+            ge=0.1,
+            le=2.0,
+            default=1.0,
+        ),
     ) -> str:
         """Run a single prediction on the model"""
         chat = self.chat
@@ -62,7 +74,6 @@ class Predictor(BasePredictor):
         chat_state = CONV_VISION.copy()
         img_list = []
         llm_message = chat.upload_img(raw_image, chat_state, img_list)
-        num_beams, temperature = 1, 1.0
         chat.ask(message, chat_state)
 
         llm_message = chat.answer(
