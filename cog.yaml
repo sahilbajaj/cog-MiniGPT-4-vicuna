@@ -63,9 +63,5 @@ build:
   - "gradio-client==0.0.8"
   - "wandb"
 
-  run:
-    - "wget https://huggingface.co/wangrongsheng/MiniGPT4-7B/resolve/main/prerained_minigpt4_7b.pth"
-
-
 # predict.py defines how predictions are run on your model
 predict: "predict.py:Predictor"
