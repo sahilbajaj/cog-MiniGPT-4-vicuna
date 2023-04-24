@@ -1,8 +1,8 @@
-# MiniGPT-4 w/ Vicuna-7B Cog-ized for running on Replicate.com
+# MiniGPT-4 w/ Vicuna-13B Cog-ized for running on Replicate.com
 
-https://replicate.com/nelsonjchen/minigpt-4_vicuna-7b
+https://replicate.com/nelsonjchen/minigpt-4_vicuna-13b
 
-This is MiniGPT-4 w/ Vicuna-7B, really sloppily ported to run on replicate.com. It's not really meant to be used as a chat experience. It's more useful for image captioning or questioning.
+This is MiniGPT-4 w/ Vicuna-13B, really sloppily ported to run on replicate.com. It's not really meant to be used as a chat experience. It's more useful for image captioning or questioning.
 
 The refactor/extraction was inspired by [152334H's repo](https://github.com/152334H/MiniGPT-4-discord-bot/blob/bot/bot.py).
 
