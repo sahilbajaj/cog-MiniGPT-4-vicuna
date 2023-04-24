@@ -19,6 +19,7 @@ Hopefully the MiniGPT4 or other groups may be able to provide a more permissive 
 ## Build
 
 1. Run `cog run python dl.py` to download weights from WangRongsheng. This will save the weights to a `./weights` directory.
+2. Run `wget https://huggingface.co/wangrongsheng/MiniGPT4/resolve/main/pretrained_minigpt4.pth` or `wget https://huggingface.co/wangrongsheng/MiniGPT4-7B/resolve/main/prerained_minigpt4_7b.pth` to download the pre-trained minigpt4.
 2. Run `sudo chmod -R +r weights/` to make the weights readable by the builder.
 2. Run `cog build` to build the docker image. This will take a while.
 
