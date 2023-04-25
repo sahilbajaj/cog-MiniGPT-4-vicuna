@@ -56,7 +56,7 @@ class Predictor(BasePredictor):
         image: Path = Input(
             description="Input image to discuss"),
         message: str = Input(
-            description="Message to send to the bot.",
+            description="Message to send to MiniGPT-4.",
             default="Please describe the image.",
         ),
         num_beams: int = Input(
