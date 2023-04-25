@@ -60,16 +60,21 @@ class Predictor(BasePredictor):
             default="Please describe the image.",
         ),
         num_beams: int = Input(
-            description="beam search numbers",
+            description="beam search numbers. More beams require more VRAM.",
             ge=1,
             le=10,
             default=1,
         ),
         temperature: float = Input(
-            description="temperature",
+            description="Adjusts randomness of outputs, greater than 1 is random and 0 is deterministic, 0.75 is a good starting value.",
             ge=0.1,
             le=2.0,
-            default=1.0,
+            default=0.75,
+        ),
+        max_new_tokens: int = Input(
+            description="Maximum number of tokens to generate. A word is generally 2-3 tokens (minimum: 1)",
+            ge=1,
+            default=500,
         ),
     ) -> str:
         """Run a single prediction on the model"""
@@ -83,7 +88,7 @@ class Predictor(BasePredictor):
         llm_message = chat.answer(
             conv=chat_state,
             img_list=img_list,
-            max_new_tokens=1000,
+            max_new_tokens=max_new_tokens,
             num_beams=num_beams,
             temperature=temperature
         )[0]
