@@ -37,9 +37,6 @@ dependencies:
     - regex==2022.10.31
     - tokenizers==0.13.2
     - tqdm==4.64.1
-    - torch==1.13.0+cu117
-    - torchvision==0.14.0+cu117
-    - torchaudio==0.13.0
     - transformers==4.28.0
     - timm==0.6.13
     - spacy==3.5.1
